@@ -12,13 +12,15 @@ namespace WAPP_V1.Unit.Profile
     /// 
     /// I was considering having a class just for accepted values for a characteristic. Eg Attacks attacks = new Attacks(CharacteristicValue.One);
     /// </summary>
-    public class Charateristic {
+    public abstract class Charateristic
+    {
         public Charateristic(string value) => Value = value;
         public readonly string Value;
         public string Name = "";
         public string Abbreviation = "";
     }
-    public class Attacks : Charateristic
+
+    public sealed class Attacks : Charateristic
     {
         public Attacks(string value) : base(value)
         {
@@ -26,6 +28,7 @@ namespace WAPP_V1.Unit.Profile
             Abbreviation = "A";
         }
     }
+
     public class Ballisticskill : Charateristic
     {
         public Ballisticskill(string value) : base(value)
@@ -34,6 +37,7 @@ namespace WAPP_V1.Unit.Profile
             Abbreviation = "BS";
         }
     }
+
     public class Initiative : Charateristic
     {
         public Initiative(string value) : base(value)
@@ -42,6 +46,7 @@ namespace WAPP_V1.Unit.Profile
             Abbreviation = "I";
         }
     }
+
     public class Leadership : Charateristic
     {
         public Leadership(string value) : base(value)
@@ -50,6 +55,7 @@ namespace WAPP_V1.Unit.Profile
             Abbreviation = "Ld";
         }
     }
+
     public class Movement : Charateristic
     {
         public Movement(string value) : base(value)
@@ -58,6 +64,7 @@ namespace WAPP_V1.Unit.Profile
             Abbreviation = "M";
         }
     }
+
     public class Strength : Charateristic
     {
         public Strength(string value) : base(value)
@@ -66,6 +73,7 @@ namespace WAPP_V1.Unit.Profile
             Abbreviation = "S";
         }
     }
+
     public class Toughness : Charateristic
     {
         public Toughness(string value) : base(value)
@@ -74,6 +82,7 @@ namespace WAPP_V1.Unit.Profile
             Abbreviation = "T";
         }
     }
+
     public class Weaponskill : Charateristic
     {
         public Weaponskill(string value) : base(value)
@@ -82,6 +91,7 @@ namespace WAPP_V1.Unit.Profile
             Abbreviation = "WS";
         }
     }
+
     public class Wounds : Charateristic
     {
         public Wounds(string value) : base(value)
