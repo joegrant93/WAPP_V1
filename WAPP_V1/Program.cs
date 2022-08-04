@@ -10,7 +10,7 @@ namespace WAPP_V1
     {
         static void Main(string[] args)
         {
-            Profile Goblin = new(
+            var goblin = new Profile(
                 movement: new Movement("4"),
                 weaponskill: new Weaponskill("2"),
                 ballisticskill: new Ballisticskill("3"),
@@ -20,9 +20,9 @@ namespace WAPP_V1
                 initiative: new Initiative("2"),
                 attacks: new Attacks("1"),
                 leadership: new Leadership("6"),
-                name: "Goblin"
-                );
-            WriteLine(Goblin);
+                name: "Goblin");
+
+            WriteLine(goblin);
         }
     }
 }
